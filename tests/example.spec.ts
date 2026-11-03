@@ -5,6 +5,7 @@ test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   // Expect a title "to contain" a substring.
+  //Adding a valid comment for the test
   await expect(page).toHaveTitle(/Playwright/);
 });
 
