@@ -5,7 +5,7 @@ test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/QAQAQAPlaywright/);
+  await expect(page).toHaveTitle(/Playwright/);
 });
 
 test('get started link', async ({ page }) => {
@@ -18,3 +18,10 @@ test('get started link', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
 
+test('has title2', async ({ page }) => {
+  //this is title test
+  await page.goto('https://playwright.dev/docs/intro');
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle(/Installation/);
+});
